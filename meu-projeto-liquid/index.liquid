@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>{{ titulo }}</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>{{ titulo }}</h1>
+    <p>Feito por {{ nome }} usando LiquidJS</p>
+  </header>
+
+  <main>
+    <div class="card" id="produtoCard">
+      <img src="{{ produtos[0].img }}" alt="Imagem do produto" id="produtoImg">
+      <h2 id="produtoTitulo">{{ produtos[0].titulo }}</h2>
+      <p id="produtoDescricao">{{ produtos[0].descricao }}</p>
+      <span class="preco" id="produtoPreco">{{ produtos[0].preco }}</span>
+      <button id="trocarBtn">Trocar Produto</button>
+    </div>
+  </main>
+
+  <footer>
+    <small>Gerado com LiquidJS</small>
+  </footer>
+
+  <script>
+    const produtos = {{ produtos | json }};
+    let indice = 0;
+
+    document.getElementById('trocarBtn').addEventListener('click', () => {
+      indice = (indice + 1) % produtos.length;
+      document.getElementById('produtoImg').src = produtos[indice].img;
+      document.getElementById('produtoTitulo').textContent = produtos[indice].titulo;
+      document.getElementById('produtoDescricao').textContent = produtos[indice].descricao;
+      document.getElementById('produtoPreco').textContent = produtos[indice].preco;
+    });
+  </script>
+</body>
+</html>

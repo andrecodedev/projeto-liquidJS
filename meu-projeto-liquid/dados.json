@@ -1,0 +1,24 @@
+{
+  "titulo": "Loja de Teste com Liquid",
+  "nome": "André Vitor",
+  "produtos": [
+    {
+      "img": "img/produto1.webp",
+      "titulo": "Mouse Gamer",
+      "descricao": "Mouse com alta precisão e iluminação RGB.",
+      "preco": "R$ 150,00"
+    },
+    {
+      "img": "img/produto2.webp",
+      "titulo": "Teclado Mecânico",
+      "descricao": "Teclado com switches mecânicos e design ergonômico.",
+      "preco": "R$ 350,00"
+    },
+    {
+      "img": "img/produto3.webp",
+      "titulo": "Headset",
+      "descricao": "Headset com som surround e microfone ajustável.",
+      "preco": "R$ 250,00"
+    }
+  ]
+}
