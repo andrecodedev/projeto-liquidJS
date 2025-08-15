@@ -1,36 +1,37 @@
+/* Reset simples */
 body {
-  font-family: Arial, sans-serif;
-  background: linear-gradient(to right, #777777ff, #3466abff);
-  color: #fff;
   margin: 0;
   padding: 0;
-}
-
-header, footer {
+  font-family: Arial, sans-serif;
+  background: linear-gradient(to right, #777, #3466ab);
+  color: #fff;
   text-align: center;
-  padding: 10px;
 }
 
+/* Header e footer */
+header {
+  padding: 15px;
+}
+
+/* Main centralizado */
 main {
+  min-height: 60vh;
+}
+
+.cardContent {
   display: flex;
   justify-content: center;
-  align-items: center;
-  min-height: 70vh;
 }
 
+/* Card */
 .card {
   background-color: #fff;
   color: #333;
   border-radius: 12px;
   padding: 20px;
-  width: 250px;
-  text-align: center;
+  max-width: 400px;
+  width: 100%;
   box-shadow: 0 4px 15px rgba(0,0,0,0.3);
-  transition: transform 0.3s;
-}
-
-.card:hover {
-  transform: scale(1.05);
 }
 
 .card img {
@@ -38,23 +39,68 @@ main {
   border-radius: 8px;
 }
 
+.card h2 {
+  font-size: 1.5rem;
+  margin: 15px 0 10px;
+}
+
+.card p {
+  font-size: 1rem;
+  margin-bottom: 10px;
+}
+
 .preco {
-  display: block;
-  margin: 10px 0;
+  font-size: 1.3rem;
   font-weight: bold;
-  font-size: 1.2em;
   color: #007acc;
+  display: block;
+  margin-bottom: 15px;
 }
 
 button {
   background-color: #007acc;
-  color: white;
+  color: #fff;
   border: none;
-  padding: 10px 15px;
+  padding: 12px 20px;
   border-radius: 8px;
   cursor: pointer;
+  font-size: 1rem;
 }
 
 button:hover {
   background-color: #005f99;
+}
+
+.textContent {
+  padding: 1rem;
+  font-size: 1.5rem;
+}
+
+/* ===== Media Queries para Mobile ===== */
+@media screen and (max-width: 600px) {
+  .card {
+    padding: 25px;
+    max-width: 90%;
+  }
+
+  .card h2 {
+    font-size: 2rem;  /* maior no mobile */
+  }
+
+  .card p {
+    font-size: 1.2rem;
+  }
+
+  .preco {
+    font-size: 1.6rem;
+  }
+
+  button {
+    font-size: 1.2rem;
+    padding: 15px 25px;
+  }
+
+  .textContent {
+    font-size: 2rem;
+  }
 }
